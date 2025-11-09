@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="../css/global-styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+    <h1>Registration Form</h1>
+    <form action = "#" method = "POST">
+        <label>Enter username</label>
+        <input type = "text" name = "username" /> <br /> <br />
+        <label>Enter password</label>
+        <input type = "password" name = "password" /> <br /> <br />
+        <label>Select gender:</label>
+        <label><input type = "radio" name = "gender" value = "M"/>Male</label>
+        <label><input type = "radio" name = "gender" value = "F"/>Female</label> <br /> <br />
+        <label>Select skills:</label>
+        <label><input type = "checkbox" name = "skills" value = "Java" checked/>Java</label>
+        <label><input type = "checkbox" name = "skills" value = "Python"/>Python</label>
+        <label><input type = "checkbox" name = "skills" value = "Angualar"/>Angular</label> <br /> <br />
+        <label>Select dob</label>
+        <input type = "date" name = "dob" /><br /><br />
+        <label>Select qualification</label>
+        <select name = "qualification">
+            <optgroup label="Graduation">
+                <option value = "BE">BTECH</option>
+                <option value = "BCA">BCA</option>
+                <option value = "BCOM">BCOM</option>
+            </optgroup>
+            <optgroup label="Post Graduation">
+                <option value = "MTech">MTech</option>
+                <option value = "MCA">MCA</option>
+            </optgroup>
+        </select> <br /><br />
+        <label>Submit Profile</label>
+        <input type = "file" name = "profile" /> <br /> <br />
+        <input type = "submit" value = "Register" />
+        <input type = "reset" value = "Reset" />
+    </form>
     <h1>Anchor tags</h1>
     <a href = "http://www.google.com" target = "_self">Google</a> <br />
     <a href = "http://www.gmail.com" target = "_blank">Gmail</a> <br />
