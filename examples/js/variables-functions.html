@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables and Functions Demo</h1>
+    <script>
+        function greet(firstname, lastname) {
+            document.write("<h3>Hi "+firstname+" "+lastname+"</h3>");
+        }
+        function add(x, y) {
+          document.write("<h4>add(x, y) is called</h4>");
+          return (x + y);   
+        }
+        var result = add(20, 30);
+        document.write("<h4>Result = "+result+"</h4>");
+        result = add(30, 50);
+        document.write("<h4>Result = "+result+"</h4>");
+        
+        greet("Virat", "Kholi");
+        greet("Salman", "Khan");
+        var username = "Kishor"; // string 
+        var phone = 9876543211; // number
+        var isEmployed = true; // boolean
+        document.write(username+"<hr/>");
+        document.write(typeof(phone)+" is the type of phone<br/>");
+        document.write(typeof(isEmployed)+" is the type of isEmployed<br/>")
+        document.write("<h3>Username = "+username+"</h3>");
+        document.write("<h3>Phone = "+phone+", IsEmployed = "+isEmployed+"</h3>");
+        // in javascript you don't have types to specify a variable can store a specific type of value
+        phone = "+91-923892423";
+        document.write("<h3>Phone = "+phone+", IsEmployed = "+isEmployed+"</h3>");
+        document.write(typeof(phone)+" is the type of phone<br/>")
+        // you can identify the types using typeof built in function
+        document.write(typeof(username)+"<br/>");
+
+    </script>
+</body>
+</html>

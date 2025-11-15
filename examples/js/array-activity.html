@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sum, Min and Max activity</h1>
+    <script>
+        let items = [75, -5, 8, 20, -8, 5, 15];
+        let sum = 0;
+        let max = items[0];
+        let min = items[0];
+        for(let i of items) {
+            sum = sum + i;
+            if(i > max) {
+                max = i;
+            }
+            if(i < min) {
+                min = i;
+            }
+        }
+        document.write("Sum="+sum+",Max="+max+",Min="+min);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Arrays Demo</h2>
+    <script>
+        let products = ["Laptop", "Mobile", "Camera", "Mouse"];
+        document.write("<h3>Item at 0th index: "+products[0]+"</h3>");
+        document.write("<h3>Size: "+products.length+"</h3>");
+        // for loop
+        for(let i = 0; i < products.length; i++) {
+            document.write("<h3>Item at position "+i+" is "+products[i]+"</h3>");
+        }
+        // for..of
+        document.write("-----------for of-------------")
+        for(let p of products) {
+            document.write("<h3>product = "+p+"</h3>");
+        }
+    </script>
+</body>
+</html>
