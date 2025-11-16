@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="handleClick()">Button</button>
+    <div>
+        <button onclick="applyColor('red')">Red</button>
+        <button onclick="applyColor('green')">Green</button>
+        <button onclick="applyColor('blue')">Blue</button>
+    </div>
+    <div id = "main">Button clicked: </div>
+    <script>
+        let counter = 0;
+        function handleClick() {
+            let ele = document.querySelector("#main");
+            counter++;
+            ele.textContent = 'Button clicked: '+counter+" time(s)";
+            console.log("Button clicked "+counter+" times");
+        }
+        function applyColor(value) {// value=green
+         let mainEle = document.querySelector("#main"); // <div id = "main"
+         mainEle.style.color = value; // <div style='color:red'
+        }
+    </script>
+</body>
+</html>

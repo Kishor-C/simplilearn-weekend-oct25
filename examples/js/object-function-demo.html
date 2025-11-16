@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {name: "Kishor", phone : 929320393, display: function(){
+            document.write('<p>Name='+this.name+',Phone='+this.phone+'</p>');
+        }};
+        person.display();
+        // function style object with constructor
+        function Student(rollno, name) {
+            this.rollno = rollno;
+            this.name = name;
+            this.print = function () {
+                document.write('<p>Rollno='+this.rollno+',Name='+this.name+'</p>');
+            }
+        }
+        let student1 = new Student(123, 'Kishor');
+        let student2 = new Student(456, 'Vinay');
+        student1.print();
+        student2.print();
+        
+    </script>
+</body>
+</html>
