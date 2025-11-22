@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          let p = fetch('https://jsonplaceholder.typicode.com/users/1')
+            .then(response => response.json())
+            console.log(p); 
+            p.then(c => console.log(c))
+            console.log("hello everyone");
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rest and Spread Examples</h1>
+    <script>
+        class Employee {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            display() {
+                document.write('<p>Name='+this.name+',Age='+this.age+'</p>');
+                document.write(`<p>Name=${this.name},Age=${this.age}</p>`);
+            }
+        }
+        // rest parameter 
+        function sum(a, ...b) {
+            document.write(`<p>a=${a},b=${b}</p>`);
+        }
+        function test(x, y, ...z) {
+            let sum = x + y;
+            for(let i of z) {
+                sum = sum + i;
+            }
+            document.write(`<p>x = ${x}, y = ${y}, z = ${z}, sum = ${sum}</p>`);
+        }
+        let emp = new Employee("Raj", 35);
+        emp.display();
+        sum(20, 30);
+        sum(5, 10, 15);
+        sum(100, 200, 300, 400, 500);
+        let arr1 = [10, 20, 30];
+        let arr2 = [100, 200, 300, 400, 500];
+        test(...arr1);
+        test(...arr2); 
+    </script>
+</body>
+</html>
