@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type = 'text' id = 'i1'>
+    <button onclick = "getData()">Fetch</button>
+    <div id = "d1"></div>
+    <script>
+        async function getData() {
+            let id = document.querySelector("#i1").value;
+            let url = 'https://jsonplaceholder.typicode.com/users/'+id;
+            let pr = await fetch(url);
+            let pr2 = await pr.json();
+            let ele = document.querySelector("#d1");
+            ele.innerHTML = `<h1>Hello ${pr2.username}</h1>`;
+        }
+    </script>
+</body>
+</html>
