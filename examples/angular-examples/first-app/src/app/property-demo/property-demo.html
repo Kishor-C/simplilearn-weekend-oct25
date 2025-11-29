@@ -1,0 +1,10 @@
+<div>
+    <h2>Property Binding Demo</h2>
+    <button (click) = "toggle()">Toggle</button>
+    <div>
+        <button [disabled] = "isDisabled">Login</button>
+        <p [hidden] = "isHidden">Some toggle content</p>
+    </div>
+    <p>IsDisabled: {{isDisabled}}</p>
+    <p>IsHidden: {{isHidden}}</p>
+</div>
