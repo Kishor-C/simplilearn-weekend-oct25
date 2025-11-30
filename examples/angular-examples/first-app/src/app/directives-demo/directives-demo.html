@@ -1,0 +1,21 @@
+<div>
+    <h2>NgSwitch Demo, option: {{option}}</h2>
+    <div [ngSwitch] = "option">
+        <p *ngSwitchCase = "1">Coffee</p>
+        <p *ngSwitchCase = "2">Black Coffee</p>
+        <p *ngSwitchCase = "3">Milk</p>
+        <p *ngSwitchDefault>Wrong option</p>
+    </div>
+
+    <h2>NgFor and NgIf Demo</h2>
+    <h3>List of names</h3>
+    <ol>
+        <li *ngFor = "let n of names">{{n}}</li>
+    </ol>
+    <h3>List of users</h3>
+    <div *ngFor = "let u of users">{{u.name}} your id is {{u.id}}</div>
+
+    <button (click) = "toggle()">Toggle</button>
+    <p >Hello {{username}}</p>
+    <p *ngIf = "username">Hello {{username}}</p>
+</div>

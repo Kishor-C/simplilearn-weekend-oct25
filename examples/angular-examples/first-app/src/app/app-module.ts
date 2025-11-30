@@ -9,11 +9,14 @@ import { EventDemo } from './event-demo/event-demo';
 import { PropertyDemo } from './property-demo/property-demo';
 import { FormsModule } from '@angular/forms';
 import { TwoWayDemo } from './two-way-demo/two-way-demo';
+import { DirectivesDemo } from './directives-demo/directives-demo';
+import { PipeDemo } from './pipe-demo/pipe-demo';
+import { NameFormatPipe } from './name-format-pipe';
 
 
 @NgModule({
   declarations: [
-    App, Hello, Hello2, EventDemo, PropertyDemo, TwoWayDemo
+    App, Hello, Hello2, EventDemo, PropertyDemo, TwoWayDemo, DirectivesDemo, PipeDemo, NameFormatPipe
   ],
   imports: [
     BrowserModule,

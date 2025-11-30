@@ -1,0 +1,15 @@
+<div>
+    <h2>Custom pipe demo</h2>
+    <p *ngFor = "let u of users">{{u.username | nameFormat: u.gender}}</p>
+    <h2>Pipe demo</h2>
+    <div>
+        <p>Name: {{employee.name | uppercase }}</p>
+        <p>Salary: {{employee.salary | currency}}</p>
+        <p>Salary in INR: {{employee.salary * 86 | currency : 'INR'}}</p>
+        <p>Salary in EUR: {{employee.salary | currency : 'EUR'}}</p>
+        <p>Birthday: {{employee.birthday | date }}</p>
+        <p>Birthday: {{employee.birthday | date : 'dd-MM-yyyy'}}</p>
+        <p>Birthday: {{employee.birthday | date : 'dd-MMM-yyyy'}}</p>
+        <p>JSON: {{employee | json}}</p>
+    </div>
+</div>
