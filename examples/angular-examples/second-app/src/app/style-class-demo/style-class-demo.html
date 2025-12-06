@@ -1,0 +1,13 @@
+<div>
+    <h2>NgStyle binding</h2>
+    <div [ngStyle] = "myStyles">Lorem ipsum dolor sit amet.</div>
+    <div>
+        <a href = "#" (click) = "changeStylesToGreen()">Green</a> &nbsp; &nbsp;
+        <a href = "#" (click) = "changeStylesToDefault()">Blue</a> &nbsp; &nbsp;
+        <a href = "#" (click) = "changeStylesToRed()">Red</a> 
+    </div>
+    <h2>NgClass binding</h2>
+    <div [ngClass] = "{'blueColor' : status}">Lorem ipsum dolor sit amet.</div>
+    <button (click) = "toggle()">Toggle</button>
+
+</div>
