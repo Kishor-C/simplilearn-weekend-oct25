@@ -1,0 +1,31 @@
+<div class = "container-fluid">
+    <h3 class="alert alert-primary w-25 text-center">Registration Form</h3>
+    <div class = "w-25">
+        <form #user = "ngForm" (ngSubmit) = "handleForm(user.value)">
+            <h5>Enter firstname</h5>
+            <input type = "text" [(ngModel)] = "firstname" name = "fn" #first="ngModel" required
+                class = "form-control form-control-lg" autocomplete="off">
+            <div *ngIf = "!first.pristine && first.invalid"  class = "alert alert-danger">Firstname is required</div>
+            <h5>Enter lastname</h5>
+            <input type = "text" [(ngModel)] = "lastname" name = "ln"
+                class = "form-control form-control-lg" autocomplete="off" required>
+            <h5>Enter phone</h5>
+            <input type = "text" [(ngModel)] = "phone" name = "ph"
+                class = "form-control form-control-lg" autocomplete="off" required>
+            <h5>Select birthday</h5>
+            <input type = "date" [(ngModel)] = "dob" name = "dob"
+                class = "form-control form-control-lg" required><br />
+            <input type = "submit" [disabled] = "user.invalid" value = "Register" class = "btn btn-primary btn-lg w-100">
+        </form>
+    </div>
+    <hr />
+    <div>
+        <h4>Firstname NgModel Instance</h4>
+        <p>Value: {{first.value}}, Valid: {{first.valid}}, Invalid: {{first.invalid}}, Pristine: {{first.pristine}}</p>
+    </div>
+    <div>
+        <h4>NgForm Instance</h4>
+        <p>Value: {{user.value | json}}</p>
+        <p>Invalid: {{user.invalid}}</p>
+    </div>
+</div>
