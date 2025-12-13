@@ -1,11 +1,26 @@
 <div>
+    <h2>Profile Form</h2>
     <form [formGroup] = "userForm" (ngSubmit) = "handleForm()">
         <h5>Firstname</h5>
-        <input type = "text" formControlName = "firstname"><br />
+        <input type = "text" formControlName = "firstname">
+        <span *ngIf = "!userForm.controls['firstname'].pristine && userForm.controls['firstname'].invalid" class="text-danger">
+            Firstname must have mininum 3 characters</span>
+        <br />
         <h5>Lastname</h5>
-        <input type = "text" formControlName = "lastname"><br />
+        <input type = "text" formControlName = "lastname">
+        <span *ngIf = "!userForm.controls['lastname'].pristine && userForm.controls['lastname'].invalid" class="text-danger">
+            Last must have mininum 1 character</span>
+        <br />
         <h5>Phone</h5>
-        <input type = "text" formControlName = "phone"><br />
-        <input type = "submit" value = "Register">
+        <input type = "number" formControlName = "phone">
+        <span *ngIf = "!userForm.controls['phone'].pristine && userForm.controls['phone'].invalid" class="text-danger">
+            Phone number must be 10 digits</span>
+        <br />
+        <input type = "submit" value = "Register" [disabled] = "userForm.invalid">
     </form>
+    <div>
+        <p>Firstname !pristine: {{!userForm.controls['firstname'].pristine}}</p>
+        <p>Firstname invalid: {{userForm.controls['firstname'].invalid}}</p>
+        <p>Form group invalid: {{userForm.invalid}}</p>
+    </div>
 </div>

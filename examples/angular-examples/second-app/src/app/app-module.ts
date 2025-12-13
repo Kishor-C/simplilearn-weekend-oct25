@@ -9,6 +9,8 @@ import { Child } from './child/child';
 import { Tdf } from './tdf/tdf';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Mdf } from './mdf/mdf';
+import { ListProfile } from './list-profile/list-profile';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { Mdf } from './mdf/mdf';
     Parent,
     Child,
     Tdf,
-    Mdf
+    Mdf,
+    ListProfile
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { Mdf } from './mdf/mdf';
     ReactiveFormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(), provideHttpClient()
   ],
   bootstrap: [App]
 })

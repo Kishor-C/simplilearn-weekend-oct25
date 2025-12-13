@@ -1,0 +1,12 @@
+<div>
+    <h2>Profiles list</h2>
+    <button (click) = "handleClick()" class="btn btn-primary btn-lg">Refresh</button>
+    <br />
+    <div *ngFor = "let p of profiles">
+        Hi {{p.firstname}} {{p.lastname}}, your phone no is {{p.phone}}
+    </div>
+    <div *ngIf = "users">
+        <h3>Users from JSON placeholder</h3>
+        <p *ngFor = "let u of users">Hi {{u.name}}, your id is {{u.id}}</p>
+    </div>
+</div>
