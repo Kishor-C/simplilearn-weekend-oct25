@@ -1,0 +1,15 @@
+<div class = "w-25">
+    <h3>Login Form</h3>
+    <form [formGroup] = "loginForm" (ngSubmit)="handleLogin()">
+        <input  type = 'text' formControlName = 'username'
+            placeholder="Enter username"
+            class = 'form-control form-control-lg'>
+        <br />
+        <input  type = 'password' formControlName = 'password'
+            placeholder="Enter password"
+            class = 'form-control form-control-lg'>
+        <br />
+        <input type = "submit" value = "Login"
+            class = "btn btn-primary btn-lg">
+    </form>
+</div>
