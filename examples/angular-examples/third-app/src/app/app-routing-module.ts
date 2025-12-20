@@ -6,12 +6,14 @@ import { Search } from './search/search';
 import { Success } from './success/success';
 import { Dashboard } from './dashboard/dashboard';
 import { Settings } from './settings/settings';
+import { authGuard } from './auth-guard';
 
 const routes: Routes = [
   {path: 'login', component : Login},
   {path: 'register', component: Register},
   {path: '', component: Login},
-  {path: 'success/:user', component: Success, children: [
+  {path: 'success/:user', component: Success, 
+    canActivate : [authGuard],  children: [
     {path: '', component: Dashboard},
     {path: 'dashboard', component: Dashboard},
     {path: 'search', component: Search},
