@@ -8,7 +8,6 @@ public class Customer extends Person {
 		super(name, gender); // super(String, String) -> Person(String, String)
 		this.customerId = customerId;
 		this.pan = pan;
-		
 	}
 	
 	public int getCustomerId() {
