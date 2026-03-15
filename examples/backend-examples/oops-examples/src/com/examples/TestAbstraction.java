@@ -1,33 +1,34 @@
 package com.examples;
-// abstraction - no logics in the methods
+
+// interface will have only abstract methods
 interface DBOperations {
 	void store();
 	void delete();
+	void update();
 }
-// classes should implement the abstract methods
-// assume this is implemented by Developer1
-class DBImplV1 implements DBOperations {
-
-	@Override
-	public void store() {
-		System.out.println("store() in V1");
-	}
-
-	@Override
+// Developer 1 - implements the interface
+abstract class DBImpl implements DBOperations {
 	public void delete() {
-		System.out.println("delete() in V1");
+		System.out.println("delete() in Impl");
 	}
-	
+	public void update() { 
+		System.out.println("update() in Impl");
+	}
 }
-
+class DBImpl2 extends DBImpl {
+	public void store() {
+		System.out.println("store() in Impl2");
+	}
+}
 public class TestAbstraction {
-	// assume Developer2 & Developer3 uses store & delete method
 	public static void main(String[] args) {
 		// HT = LT
-		DBOperations op = new DBImplV1();
-		// developer needs to understand they need to store or delete
-		// hence they will invoke store & delete, but don't think how it is implemented
-		op.store();
-		op.delete();
+		DBOperations dbop = new DBImpl2();
+		// Developer 2 - calls the store
+		dbop.store(); // from Developer2 store() implementation is hidden
+		// Developer 3 - calls the delete
+		dbop.delete();
+		// Developer 4 - calls the update
+		dbop.update();
 	}
 }
