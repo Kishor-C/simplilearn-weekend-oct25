@@ -15,6 +15,7 @@ public class TestTransaction {
 			Scanner scan = new Scanner(System.in);
 			PreparedStatement statement = 
 					connection.prepareStatement("insert into employee(name, salary) values(?,?)");
+			
 			// execute 5 records with for loop
 			for(int i = 1; i <= 5; i++) {
 				System.out.println("Enter name & salary");
