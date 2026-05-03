@@ -2,12 +2,27 @@ package com.example;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="profile")
 public class Profile {
-	private int profileId;
+	@Id
+	@Column(name="profile_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer profileId;
+	@Column(name="name")
 	private String name;
+	@Column(name="phone")
 	private long phone;
+	@Column(name="dob")
 	private LocalDate dob;
-	public Profile(int profileId, String name, long phone, LocalDate dob) {
+	public Profile(Integer profileId, String name, long phone, LocalDate dob) {
 		super();
 		this.profileId = profileId;
 		this.name = name;
@@ -18,10 +33,10 @@ public class Profile {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public int getProfileId() {
+	public Integer getProfileId() {
 		return profileId;
 	}
-	public void setProfileId(int profileId) {
+	public void setProfileId(Integer profileId) {
 		this.profileId = profileId;
 	}
 	public String getName() {
