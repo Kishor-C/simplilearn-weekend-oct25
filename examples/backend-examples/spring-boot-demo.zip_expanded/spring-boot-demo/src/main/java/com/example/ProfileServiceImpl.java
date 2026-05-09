@@ -13,9 +13,30 @@ public class ProfileServiceImpl {
 	private ProfileRepository profileRepo;
 	
 	/*
+	 * Updating the entity based on id
+	 */
+	public Profile updateProfile(Integer id, Profile profile) {
+		Profile profileEntity = findProfile(id);
+		if(profileEntity != null) {
+			if(profile.getName() != null) {
+				profileEntity.setName(profile.getName());
+			}
+			if(profile.getPhone() != null) {
+				profileEntity.setPhone(profile.getPhone());
+			}
+			if(profile.getDob() != null) {
+				profileEntity.setDob(profile.getDob());
+			}
+			//profileRepo.save(profileEntity);
+		}
+		return profileRepo.save(profileEntity);
+	}
+	/*
 	 * saves the entity and returns the saved entity
 	 */
 	public Profile createProfile(Profile profile) {
+		// start time
+		// end time
 		return profileRepo.save(profile);
 	}
 	/*
@@ -33,4 +54,5 @@ public class ProfileServiceImpl {
 		Optional<Profile> option = profileRepo.findById(id);
 		return option.orElse(null);
 	}
+	
 }

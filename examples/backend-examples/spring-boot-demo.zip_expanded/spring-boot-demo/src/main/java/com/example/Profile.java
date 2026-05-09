@@ -19,10 +19,10 @@ public class Profile {
 	@Column(name="name")
 	private String name;
 	@Column(name="phone")
-	private long phone;
+	private Long phone;
 	@Column(name="dob")
 	private LocalDate dob;
-	public Profile(Integer profileId, String name, long phone, LocalDate dob) {
+	public Profile(Integer profileId, String name, Long phone, LocalDate dob) {
 		super();
 		this.profileId = profileId;
 		this.name = name;
@@ -45,10 +45,10 @@ public class Profile {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public long getPhone() {
+	public Long getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(Long phone) {
 		this.phone = phone;
 	}
 	public LocalDate getDob() {
